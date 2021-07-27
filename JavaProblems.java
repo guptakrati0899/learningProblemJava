@@ -19,6 +19,8 @@ public class JavaProblems {
 		checkConsonantVowel();
 		playingWithNumbers();
 		calculateRoots(a, b, c);  
+		sum0fThreeInteger();
+		twoDimensionalArray();
 		
 		
 		
@@ -276,6 +278,7 @@ public class JavaProblems {
 	            System.out.println("Largest number is:"+r);
 	        }
 	        
+		}
 	      
 	        
 	        
@@ -286,7 +289,7 @@ public class JavaProblems {
 		
 	        //2. Sum of three Integers add to zero
 	        
-	        
+	        public static void sum0fThreeInteger() {
 	        int arr[] = {1, 0, 2, -4, 3};
 	        int array = arr.length;
 	        int count=0;
@@ -345,12 +348,43 @@ public class JavaProblems {
            {  
         	   System.out.println("Roots are not real.");  
            }
-		
+       }
            
            
            
            
-           //5.      Wind   Chill
+           // 2-D array
+           public static void twoDimensionalArray()  {
+           int row, col, i, j;
+           int arr[][] = new int[10][10];
+           Scanner scan = new Scanner(System.in);
+    	   
+         
+           System.out.print("Enter row for the array (max 10) : ");
+           row = scan.nextInt();
+           System.out.print("Enter column for the array (max 10) : ");
+           col = scan.nextInt();
+           
+           
+           System.out.println("Enter " +(row*col)+ " Array Elements : ");
+           for(i=0; i<row; i++)
+           {
+               for(j=0; j<col; j++)
+               {
+                   arr[i][j] = scan.nextInt();
+               }
+           }
+    	   
+           
+           System.out.print("The Array is :\n");
+           for(i=0; i<row; i++)
+           {
+               for(j=0; j<col; j++)
+               {
+                   System.out.print(arr[i][j]+ "  ");
+               }
+               System.out.println();
+           }
            
                
 	  
