@@ -2,6 +2,7 @@ package learningProblemJava;
 import java.lang.Math;
 import java.util.Scanner;
 import java.lang.Integer;
+import java.io.PrintWriter;  
 
 public class JavaProblems {
 	public static void main(String[] args) {
@@ -9,7 +10,7 @@ public class JavaProblems {
 		int a = 1, b = 5, c = 2;     
 	 
 		System.out.println("Welcome to Learning Problems Of Java\n");
-		flipTheCoin();
+	    flipTheCoin();  
 		LeapYear();
 		harmonicNumber();
 		primeFactorisation();
@@ -374,6 +375,7 @@ public class JavaProblems {
                    arr[i][j] = scan.nextInt();
                }
            }
+           PrintWriter writer = new PrintWriter(System.out);   
     	   
            
            System.out.print("The Array is :\n");
@@ -381,12 +383,19 @@ public class JavaProblems {
            {
                for(j=0; j<col; j++)
                {
-                   System.out.print(arr[i][j]+ "  ");
+     
+                    
+                   writer.print(arr[i][j]+ " ");  
+                   writer.flush();  
+                   
+                  
                }
-               System.out.println();
-           }
-           
+               writer.println();
                
-	  
+              
+           }
+           System.out.println();
+          
+   
      }          
 }
